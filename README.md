@@ -34,7 +34,7 @@ nix build
 
 ### Nix shell
 ```sh
-nixedevelop
+nix develop
 ```
 
 ## Run
