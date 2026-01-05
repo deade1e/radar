@@ -1,0 +1,7 @@
+target/
+script.txt
+result.txt
+.radar_history
+exclude.conf
+exclude_empty.conf
+paused.conf

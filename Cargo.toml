@@ -1,0 +1,31 @@
+[package]
+name = "radar"
+version = "0.2.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4.40" }
+clap = { version = "4.5.37", features = ["derive"] }
+ipnetwork = "0.20.0"
+pnet = "0.35.0"
+rand = "0.8.5"
+log = "0.4.22"
+env_logger = "0.11.5"
+perfect_rand = "0.2.0"
+serde_json = "1.0.132"
+serde = { version = "1.0.213", features = ["derive", "rc"] }
+base64 = "0.22.1"
+hackshell = "0.3.16"
+hex = "0.4.3"
+derive_builder = "0.20.2"
+rangemap = "1.6.0"
+reqwest = { version = "0.12.23", default-features = false, features = [
+    "http2",
+    "charset",
+    "system-proxy",
+    "blocking",
+    "rustls-tls",
+] }
+cron = "0.15.0"
