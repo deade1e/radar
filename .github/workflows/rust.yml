@@ -34,23 +34,23 @@ jobs:
       id: version
 
     - name: Compress artifact
-      run: xz -c -k -e -9 ./result/bin/radar > radar.xz
+      run: xz -c -k -e -9 ./result/bin/radar > radar-x86_64-musl.xz
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
-        path: radar.xz
+        path: radar-x86_64-musl.xz
 
     - name: Release
       # if: github.ref == 'refs/heads/master'
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         draft: false
         prerelease: false
         name: ${{ steps.version.outputs.version }}
         tag_name: v${{ steps.version.outputs.version }}-${{ steps.short_sha.outputs.short_sha }}
-        files: radar.xz
+        files: radar-x86_64-musl.xz
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
