@@ -2,9 +2,9 @@ name: Rust
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "devel" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "devel" ]
 
 env:
   CARGO_TERM_COLOR: always
@@ -41,6 +41,29 @@ jobs:
       with:
         name: build-artifacts
         path: radar.xz
+
+    - name: Release
+      if: github.ref == 'refs/heads/master'
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: v${{ steps.version.outputs.version }}-${{ steps.short_sha.outputs.short_sha }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload Linux musl artifact
+      if: github.ref == 'refs/heads/master'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./radar.xz
+        asset_name: radar-${{ steps.version.outputs.version }}-x86_64-unknown-linux-musl.xz
+        asset_content_type: application/octet-stream
 
     # - name: Build
     #   run: cargo build --verbose
