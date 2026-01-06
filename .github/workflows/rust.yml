@@ -25,10 +25,21 @@ jobs:
     - name: Build
       run: nix build
 
+    - name: Get short SHA
+      id: short_sha
+      run: echo "short_sha=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_OUTPUT
+
+    - name: Get version
+      run: echo "version=$(./result/bin/radar --version | cut -d ' ' -f 2)" >> $GITHUB_OUTPUT
+      id: version
+
+    - name: Compress artifact
+      run: xz -k -e -9 ./result/bin/radar
+
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: radar
+        name: build-artifacts
         path: result/bin/*
 
     # - name: Build
