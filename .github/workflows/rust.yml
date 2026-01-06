@@ -51,8 +51,6 @@ jobs:
         name: ${{ steps.version.outputs.version }}
         tag_name: v${{ steps.version.outputs.version }}-${{ steps.short_sha.outputs.short_sha }}
         files: radar-x86_64-musl.xz
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     # - name: Release
     #   if: github.ref == 'refs/heads/master'
