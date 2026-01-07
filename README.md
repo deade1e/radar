@@ -27,7 +27,7 @@ You can easily obtain a nix shell via: `nix shell github:deade1e/radar`
 
 First of all open a radar console:
 ```sh
-user@machine> $ sudo radar -i default console
+$ sudo ./radar -i default console
 ```
 `sudo` or the equivalent permission is required to use the raw sockets.
 
@@ -89,6 +89,9 @@ This mode uses the default gateway to route packets, as `masscan` does.
 By adding `-a` the ARP mode is enabled and therefore individual mac addresses
 get resolved before sending the ethernet frames.
 
+If you want to go faster you must set the `--max-rate` parameter. Be cautious,
+it might crash the router/network.
+
 ---
 
 Perform a UDP scan in search of DNS servers:
@@ -127,7 +130,7 @@ radar> task -t monitor
 
 Script the console to execute a list of commands on start:
 ```sh
-user@machine> $ sudo radar -i default console -r script.txt
+$ sudo ./radar -i default console -r script.txt
 ```
 
 
