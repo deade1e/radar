@@ -1,5 +1,7 @@
 # Radar
 
+[![Actions Status](https://github.com/pfrankw/aemt/workflows/Build/badge.svg)](https://github.com/pfrankw/aemt/actions)
+
 Radar is a small but efficient network scanner written in Rust heavily inspired 
 by `masscan`.
 
