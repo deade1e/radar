@@ -10,6 +10,7 @@ These are the main features:
 - Rate limiting
 - Monitor mode that notifies about different kind of network events
 - JSON output
+- 100% statically built. Use it on pwned machines during pentests :P
 
 As `masscan`, it aims to be as fast as possible. On my 1Gbit network it achieves 
 circa 300k packets per second.
@@ -110,6 +111,8 @@ Monitor for DHCP requests on your interface:
 ```sh
 radar> monitor -f dhcp-req
 ```
+
+You can monitor for other events too! Check `monitor --help` to see all of them.
 
 ---
 
