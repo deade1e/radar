@@ -142,7 +142,7 @@ $ sudo ./radar -i default console -r script.txt
 
 ---
 
-Want to save the output?:
+Want to save the output?
 ```sh
 $ sudo ./radar -i default console -r script.txt > scan_output.log
 ```
