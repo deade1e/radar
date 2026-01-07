@@ -31,6 +31,10 @@ $ sudo ./radar -i default console
 ```
 `sudo` or the equivalent permission is required to use the raw sockets.
 
+This opens the scanner in console mode, where you can issue various commands.  
+To see all of them, just type `help`. The console mode is based on
+[Hackshell](https://github.com/deade1e/hackshell).
+
 ---
 
 Show the help with all commands and brief description:
@@ -133,6 +137,13 @@ Script the console to execute a list of commands on start:
 $ sudo ./radar -i default console -r script.txt
 ```
 
+---
+
+One shot scan command:
+```sh
+$ sudo ./radar -i default scan --help
+```
+
 
 ## Build
 
@@ -156,24 +167,13 @@ nix build
 nix develop
 ```
 
-## Run
-
-**Console mode**
-```sh
-sudo ./target/x86_64-unknown-linux-musl/debug/radar -i default console
-```
-This opens the scanner in console mode, where you can issue various commands.  
-To see all of them, just type `help`. The console mode is based on
-[Hackshell](https://github.com/deade1e/hackshell).
-
-**CLI mode**
-```sh
-sudo ./target/x86_64-unknown-linux-musl/debug/radar -i default scan -h
-```
-This shows you the same help shown in the console mode if the `scan` command is 
-issued.
-
 ## Purpose
 The project aims to be an extended and more pluggable/hackable version of 
 `masscan`. It both works in local networks and non RFC1918 ones, so yes, you can 
 theoretically scan the whole internet with it.
+
+## Warning
+The usage of this program to scan the whole internet or not authorized host
+might get you fined and/or arrested. Triple check before doing anything.
+
+You have been warned.
