@@ -173,7 +173,7 @@ The project aims to be an extended and more pluggable/hackable version of
 theoretically scan the whole internet with it.
 
 ## Warning
-The usage of this program to scan the whole internet or not authorized host
+The usage of this program to scan the whole internet or not authorized hosts
 might get you fined and/or arrested. Triple check before doing anything.
 
 You have been warned.
