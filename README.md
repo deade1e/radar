@@ -26,24 +26,28 @@ user@machine> $ sudo radar -i default console
 ```
 `sudo` or the equivalent permission is required to use the raw sockets.
 
+---
 
 Show the help with all commands and brief description:
 ```sh
 radar> help
 ```
 
+---
 
 Show the internal ARP table:
 ```sh
 radar> arp
 ```
 
+---
 
 Perform an ARP scan on all the interface's subnets:
 ```sh
 radar> arpscan -a
 ```
 
+---
 
 View the `scan` command help:
 ```sh
@@ -69,6 +73,7 @@ scan will be performed before the actual port scan while using this option
   -h, --help                     Print help
 ```
 
+---
 
 Perform a basic scan of an internal subnet:
 ```sh
@@ -79,6 +84,7 @@ This mode uses the default gateway to route packets, as `masscan` does.
 By adding `-a` the ARP mode is enabled and therefore individual mac addresses
 get resolved before sending the ethernet frames.
 
+---
 
 Perform a UDP scan in search of DNS servers:
 ```sh
@@ -86,12 +92,14 @@ radar> scan -p 53 192.168.1.0/24 -u -c kOQBAAABAAAAAAABBmdvb2dsZQNjb20AAAEAAQAAK
 ```
 This base64 content is a DNS request for google.com.
 
+---
 
 Monitor for DHCP requests on your interface:
 ```sh
 radar> monitor -f dhcp-req
 ```
 
+---
 
 View the current ongoing tasks:
 ```sh
@@ -103,12 +111,14 @@ Task                     Started at
 monitor                  2026-01-07 00:09:34     
 ```
 
+---
 
 Terminate a task:
 ```sh
 radar> task -t monitor
 ```
 
+---
 
 Script the console to execute a list of commands on start:
 ```sh
