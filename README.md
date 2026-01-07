@@ -86,10 +86,12 @@ radar> scan -p 53 192.168.1.0/24 -u -c kOQBAAABAAAAAAABBmdvb2dsZQNjb20AAAEAAQAAK
 ```
 This base64 content is a DNS request for google.com.
 
+
 Monitor for DHCP requests on your interface:
 ```sh
 radar> monitor -f dhcp-req
 ```
+
 
 View the current ongoing tasks:
 ```sh
@@ -101,15 +103,18 @@ Task                     Started at
 monitor                  2026-01-07 00:09:34     
 ```
 
+
 Terminate a task:
 ```sh
 radar> task -t monitor
 ```
 
+
 Script the console to execute a list of commands on start:
 ```sh
 user@machine> $ sudo radar -i default console -r script.txt
 ```
+
 
 ## Build
 
