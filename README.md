@@ -142,6 +142,15 @@ $ sudo ./radar -i default console -r script.txt
 
 ---
 
+Want to save the output?:
+```sh
+$ sudo ./radar -i default console -r script.txt > scan_output.log
+```
+Status messages are printed on `stderr` while command execution results are
+printed on `stdout`.
+
+---
+
 One shot scan command:
 ```sh
 $ sudo ./radar -i default scan --help
