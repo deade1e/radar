@@ -99,11 +99,14 @@ it might crash the router/network.
 
 ---
 
-Perform a UDP scan in search of DNS servers:
+Perform a UDP scan with a preloaded content in search of DNS servers:
 ```sh
 radar> scan -p 53 192.168.1.0/24 -u -c kOQBAAABAAAAAAABBmdvb2dsZQNjb20AAAEAAQAAKQSwAAAAAAAA
 ```
 This base64 content is a DNS request for google.com.
+
+Sometime UDP services are just a bit shy, help them by feeding them the correct
+payloads!
 
 ---
 
