@@ -91,7 +91,7 @@ radar> scan -p 1-1000 192.168.1.0/24
 ```
 This mode uses the default gateway to route packets, as `masscan` does.
 
-By adding `-a` the ARP mode is enabled and therefore individual mac addresses
+By adding `-a` the ARP mode is enabled and therefore individual MAC addresses
 get resolved before sending the ethernet frames.
 
 If you want to go faster you must set the `--max-rate` parameter. Be cautious,
