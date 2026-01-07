@@ -16,8 +16,12 @@ circa 300k packets per second.
 
 ## Usage
 
-Either download the github release binaries (only available for x86_64) or build
-the project yourself.  
+After downloading the binary from the release page do:
+```sh
+xz -d radar-x86_64-musl.xz
+mv radar-x86_64-musl radar
+chmod +x radar
+```
 
 You can easily obtain a nix shell via: `nix shell github:deade1e/radar`
 
