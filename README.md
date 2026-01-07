@@ -17,7 +17,8 @@ circa 300k packets per second.
 ## Usage
 
 Either download the github release binaries (only available for x86_64) or build
-the project yourself. `nix shell github:deade1e/radar` helps.
+the project yourself.  
+`nix shell github:deade1e/radar` helps.
 
 First of all open a radar console:
 ```sh
@@ -25,20 +26,24 @@ user@machine> $ sudo radar -i default console
 ```
 `sudo` or the equivalent permission is required to use the raw sockets.
 
+
 Show the help with all commands and brief description:
 ```sh
 radar> help
 ```
+
 
 Show the internal ARP table:
 ```sh
 radar> arp
 ```
 
+
 Perform an ARP scan on all the interface's subnets:
 ```sh
 radar> arpscan -a
 ```
+
 
 View the `scan` command help:
 ```sh
