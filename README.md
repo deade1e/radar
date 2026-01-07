@@ -18,7 +18,8 @@ circa 300k packets per second.
 
 Either download the github release binaries (only available for x86_64) or build
 the project yourself.  
-`nix shell github:deade1e/radar` helps.
+
+You can easily obtain a nix shell via: `nix shell github:deade1e/radar`
 
 First of all open a radar console:
 ```sh
